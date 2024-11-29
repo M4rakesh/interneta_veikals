@@ -1,5 +1,5 @@
 
-
+#Uzdevumu var pielikt eksamenam,netiku gala ar prog.,jo vajadzeja atkartot temu
 class Gramata:
     def __init__(self,nosaukums,autors,pieejamiba=True):
         self.nosaukums = nosaukums
@@ -22,7 +22,7 @@ garamatej=[]
 
 
 g1=Gramata("Antara","Dainis","Pieejama")
-g2=Gramata("Rich dad and poor dad","Robert T.Kiyosaki","Pieejama")
+g2=Gramata("Rich dad poor dad","Robert T.Kiyosaki","Pieejama")
 g1.g_info()
 g2.g_info()
 
