@@ -9,13 +9,20 @@ for ieraksts in cursor:
     print("nosaukums=",ieraksts[1])
     print("gads=",ieraksts[2])
     print("autora_id=",ieraksts[3],"\n")
-cursor= conn.execute("SELECT * FROM Gramatas WHERE = 'a'")
-for ieraksts in cursor:
+cursor2= conn.execute("SELECT * FROM Gramatas WHERE nosaukums LIKE 'A%'")
+for ieraksts in cursor2:
     print("garmatas_id=",ieraksts[0])
     print("nosaukums=",ieraksts[1])
     print("gads=",ieraksts[2])
     print("autora_id=",ieraksts[3],"\n")
-
+cursor3= conn.execute("SELECT vards,uzvards FROM autors INNER JOIN Gramatas on Gramatas.autora_id=autors.autora_id  ")
+for ieraksts in cursor3:
+    print("vards=",ieraksts[0])
+    print("uzvards=",ieraksts[1])
+    print("garmatas_id=",ieraksts)
+    print("nosaukums=",ieraksts[3])
+    print("gads=",ieraksts[4])
+    print("autora_id=",ieraksts[5],"\n")
 
 """conn.execute('''CREATE TABLE autors (
              autora_id      INT PRIMARY KEY  NOT NULL,
